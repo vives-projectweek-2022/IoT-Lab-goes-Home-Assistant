@@ -10,8 +10,8 @@ Idee 1: Aaron Delplancq en Brent Schaepdrijver
 
 
 - Ideeën:
-    - 1) Aan de hand van een drukknop zullen de 2 tv's aan gaan In plaats van de de tv bediening (gebruik maken van drukknop sensor en Broadlink RM Mini3)
-    - 2) 2 opties: Lichten gaan aan en uit wanneer de deur open of dicht gaat van een lokaal of lichten gaan aan en uit via het uurooster (gebruik maken van motion sensor, Smart Plug en google kalender)
+    1) Aan de hand van een drukknop zullen de 2 tv's aan gaan In plaats van de de tv bediening (gebruik maken van drukknop sensor en Broadlink RM Mini3)
+    2) 2 opties: Lichten gaan aan en uit wanneer de deur open of dicht gaat van een lokaal of lichten gaan aan en uit via het uurooster (gebruik maken van motion sensor, Smart Plug en google kalender)
 
 
 
