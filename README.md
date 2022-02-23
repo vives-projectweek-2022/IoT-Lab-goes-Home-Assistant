@@ -8,10 +8,8 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 
 - Ideeën:
-    - Temperatuur weergeven. (temperature and humidity sensor)
-    - energie verbruik van een apparaat (Smart Plug)
-    - Lichten aan wanneer de 3D printer wordt gebruikt. (3D printer lokaal en gebruik maken van motion sensor)
-    - Lichten gaan aan wanneer de deur open gaat van een lokaal (gebruik maken van een Door sensor en Smart Plug dat aangesloten wordt met een lichtbron)
+    - Aan de hand van een drukknop zullen de 2 tv's aan gaan In plaats van de de tv bediening (gebruik maken van drukknop sensor en Broadlink RM Mini3)
+    - 2 opties: Lichten gaan aan wanneer de deur open gaat van een lokaal of lichten gaan aan via het uurooster (gebruik maken van motion sensor, Smart Plug en google kalender)
 
 
 
