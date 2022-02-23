@@ -4,6 +4,8 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 - Use Home Assistant to automate and monitor the labs
 - Zigbee, Z-Wave, Aqara and Wifi sensors
+- Raspberry pi
+
 
 - Ideeën:
     - Temperatuur weergeven. (temperature and humidity sensor)
