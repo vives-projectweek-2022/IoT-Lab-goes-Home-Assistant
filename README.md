@@ -9,11 +9,9 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 - Ideeën:
     - Temperatuur weergeven. (temperature and humidity sensor)
-    - Lichten aan als er iemand binnen komt. (motion sensor)
-    - Alexa of google assistant dat de schermen kan aanzetten. (smartplug)
-    - Timer gebaseerd op lessenrooster waarvan het lokaal gebruikt wordt, bv alexa die zegt wanneer de les gedaan is.
-    - Sensor raam open of dicht, mss om het automatisch weer toe te doen of open. (door and window sensor)
-    - Deur open of dicht (door and window sensor)
+    - energie verbruik van een apparaat (Smart Plug)
+    - Lichten aan wanneer de 3D printer wordt gebruikt. (3D printer lokaal en gebruik maken van motion sensor)
+    - Lichten gaan aan wanneer de deur open gaat van een lokaal (gebruik maken van een Door sensor en Smart Plug dat aangesloten wordt met een lichtbron)
 
 
 
