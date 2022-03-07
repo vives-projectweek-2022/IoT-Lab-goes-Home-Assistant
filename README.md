@@ -1,4 +1,5 @@
 # IoT-Lab-goes-Home-Assistant
+
 Create the ultimate smart-home integration.
 Make an implementation of the campus of the future using a range of IoT devices, sensors and smart home solutions.
 
@@ -6,14 +7,24 @@ Make an implementation of the campus of the future using a range of IoT devices,
 - Zigbee, Z-Wave, Aqara and Wifi sensors
 - Raspberry pi
 
-Idee 1: Aaron Delplancq en Brent Schaepdrijver
+## Goals
 
-
-- Ideeën:
-    - Aan de hand van een drukknop zullen de 2 tv's aan gaan In plaats van de de tv bediening (gebruik maken van drukknop sensor en Broadlink RM Mini3)
+    - Aan de hand van een drukknop zullen de 2 tv's aan gaan in plaats van de tv bediening te gebruiken (gebruik maken van drukknop sensor en Broadlink RM Mini3)
     
-    -  2 opties: Lichten gaan aan en uit wanneer de deur open of dicht gaat van een lokaal of lichten gaan aan en uit via het uurooster (gebruik maken van motion sensor, Smart Plug en google kalender)
+    - 2 opties: 
+        - Lichten gaan aan en uit wanneer de deur open
+        - dicht gaat van een lokaal of lichten gaan aan en uit via het uurooster (gebruik maken van motion sensor, Smart Plug en google kalender)
 
+## Project members
 
+- [Aaron Delplancq](https://github.com/aaronD14)
+- [Duncan](https://github.com/r0897472)
+- [Brent Schaepdrijver](https://github.com/Brent-Schaepdrijver)
+- [Szymon Diżewski](https://github.com/)
 
-Sensoren vergelijken, kwaliteit testen.
+## The mentors
+
+- [Sille Van Landschoot](https://github.com/sillevl)
+- [Nico De Witte](https://github.com/BioBoost)
+- [Piet Cordemans](https://github.com/pcordemans)
+- [Jonas Lannoo](https://github.com/JonasLannoo)
