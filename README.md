@@ -9,9 +9,9 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 ## Goals
 
-    - Aan de hand van een drukknop zullen de 2 tv's aan gaan in plaats van de tv bediening te gebruiken (gebruik maken van drukknop sensor en Broadlink RM Mini3)
-    
-    - 2 opties: 
+- Aan de hand van een drukknop zullen de 2 tv's aan gaan in plaats van de tv bediening te gebruiken (gebruik maken van drukknop sensor en Broadlink RM Mini3)
+
+- 2 opties:
         - Lichten gaan aan en uit wanneer de deur open
         - dicht gaat van een lokaal of lichten gaan aan en uit via het uurooster (gebruik maken van motion sensor, Smart Plug en google kalender)
 
