@@ -9,7 +9,7 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 ## Goals
 
-- Aan de hand van een drukknop zullen de 2 tv's aan gaan in plaats van de tv bediening te gebruiken (gebruik maken van drukknop sensor en Broadlink RM Mini3)
+- data van het vives uurooster parsen en implementeren in home assistant
 
 - 2 opties:
         - Lichten gaan aan en uit wanneer de deur open
