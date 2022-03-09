@@ -9,11 +9,11 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 ## Goals
 
-- data van het vives uurooster parsen en implementeren in home assistant
+- Data van het vives uurooster parsen en implementeren in home assistant.
 
-- 2 opties:
-        - Lichten gaan aan en uit wanneer de deur open
-        - dicht gaat van een lokaal of lichten gaan aan en uit via het uurooster (gebruik maken van motion sensor, Smart Plug en google kalender)
+- Lichten gaan aan en uit wanneer de deur open.
+
+- Bekijken of de 3D printer aan staat, zo ja dan laten we een lampje branden.
 
 ## Project members
 
