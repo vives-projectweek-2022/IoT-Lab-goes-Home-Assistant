@@ -9,11 +9,11 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 ## Goals
 
-- Prijs van cryptocoins pakken via coingekko api en daarvan condities maken met home assistant.
+- Prijs van cryptocoins pakken via coingekko api en daarvan condities maken met home assistant en mail vesturen via api.
 
 - Lichten gaan aan en uit wanneer de deur open.
 
-- Bekijken of de 3D printer aan staat, zo ja dan laten we een lampje branden.
+- Bekijken of de 3D printer start, zo ja dan laten we een lampje branden en we zien de conditie van 3D printer in home assistant als hij bezig is of niet.
 
 ## Project members
 
