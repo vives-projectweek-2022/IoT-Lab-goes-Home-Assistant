@@ -9,7 +9,7 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 ## Goals
 
-- Prijs van cryptocoins pakken via coingekko api en daarvan condities maken met home assistant en mail versturen via api.
+- lichten aan en uit laten gaan door middel van het vives uurooster.
 
 - Lichten gaan aan en uit wanneer de deur open of dicht gaat.
 
