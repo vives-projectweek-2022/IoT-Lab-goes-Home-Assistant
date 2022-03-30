@@ -15,9 +15,9 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 - Bekijken of de 3D printer start, zo ja dan laten we een lampje branden en we zien de conditie van 3D printer in home assistant als hij bezig is of niet.
 
-- Temperatuur sensor laten werken met air quality monitor.
+- Shelly plug gebruiken zodat alle soldeerbouten uitgezet kunnen worden met 1 knop en de stroom vanzelf uitgezet wordt wanneer er geen beweging is .
 
-- Shelly plug gebruiken zodat alle soldeerbouten uitgezet kunnen worden met 1 knop.
+- Smart plug gebruiken voor schermen zodat alles aan/uit kan met 1 knop.
 
 ## Project members
 
