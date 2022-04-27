@@ -19,6 +19,12 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 - Smart plug gebruiken voor schermen zodat alles aan/uit kan met 1 knop.
 
+## Voortgang 
+
+- Phillips hue lampen geconfigureerd met deursensor zodat de lampen en een shelly plug aangaan
+- Phillips hue lampen geconfigureerd zodat de lichten uitgaan wanneer de deur gesloten is (tijd  is aanpasbaar)
+- Shelly plug geconfigureerd met motion sensor zodat de shelly plug uitgaat na een bepaald aantal tijd wanneer er geen beweging wordt waargenomen. (Het is ook mogelijk de shelly plug aan te doen bij het openen van de deur indien gewenst)
+
 ## Project members
 
 - [Aaron Delplancq](https://github.com/aaronD14)
