@@ -9,15 +9,31 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 ## Goals
 
-- Prijs van cryptocoins pakken via coingekko api en daarvan condities maken met home assistant en mail versturen via api.
+- lichten aan en uit laten gaan door middel van het vives uurooster.
 
-- Lichten gaan aan en uit wanneer de deur open of dicht gaat.
+- Lichten aan laten gaan wanneer de deur open gaat en dat er beweging wordt gedetecteerd.
+
+- Lichten uit laten gaan wanneer er geen beweging wordt gedetecteerd.
 
 - Bekijken of de 3D printer start, zo ja dan laten we een lampje branden en we zien de conditie van 3D printer in home assistant als hij bezig is of niet.
 
-- Temperatuur sensor laten werken met air quality monitor.
+- Schermen aan en uit laten gaan aan de hand van 1 knop.
 
-- Shelly plug gebruiken zodat alle soldeerbouten uitgezet kunnen worden met 1 knop.
+- Google assistant integreren.
+
+- Motion sensors gebruiken om smartplug aan te laten gaan en automatisch uit te schakelen na verloop van tijd.
+
+## Voortgang
+
+- Phillips hue lampen geconfigureerd met deursensor zodat de lampen en een shelly plug_auto aangaan.
+
+- Phillips hue lampen geconfigureerd zodat de lichten uitgaan wanneer er na voorloop van van tijd geen beweging wordt gedetecteerd.
+
+- Shelly plug geconfigureerd met motion sensor zodat de shelly plug uitgaat na een bepaald aantal tijd wanneer er geen beweging wordt waargenomen.
+
+- Shellyplug_auto gaat aan bij gedetecteerde waarnemingen door motion sensors.
+
+- Drie motion sensors geconfigureerd met de lichten van whiteboard en shelly_auto.
 
 ## Home Assistant
 
