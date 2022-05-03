@@ -19,6 +19,10 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 - Shelly plug gebruiken zodat alle soldeerbouten uitgezet kunnen worden met 1 knop.
 
+## Home Assistant
+
+- [The link to Home Assistant](https://iot-lab-ha.devbitapp.be/lovelace/home)
+
 ## Project members
 
 - [Aaron Delplancq](https://github.com/aaronD14)
