@@ -38,6 +38,7 @@ Make an implementation of the campus of the future using a range of IoT devices,
 ## Home Assistant
 
 - [The link to Home Assistant](https://iot-lab-ha.devbitapp.be/lovelace/home)
+The username is Shadow & password is Team12345
 
 ## Project members
 
