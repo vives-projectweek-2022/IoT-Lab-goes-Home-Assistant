@@ -1,0 +1,581 @@
+- id: '1645626564850'
+  alias: DoorOpen
+  description: ''
+  trigger:
+  - type: not_opened
+    platform: device
+    device_id: 51d7bdff6bcc482bad0b067299c41801
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_1dd8f006_on_off
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 2
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      payload: Door Closed
+      topic: testDoor
+  mode: single
+- id: '1645630149987'
+  alias: Door Open Lab1
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 01278e29f9077f6562ab71fa1a41f1fc
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_c51cf106_on_off
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: Lab1/Door1
+      payload: Open
+  - type: turn_on
+    device_id: 4e27875ca7efab4fadfab3da2fdab0e0
+    entity_id: switch.shellyplug_s_e18983
+    domain: switch
+  mode: single
+- id: '1646818447633'
+  alias: New Automation
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 01278e29f9077f6562ab71fa1a41f1fc
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_on_off
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: Lab1/Door1
+      payload: Open
+  mode: single
+- id: '1646821342177'
+  alias: Motion
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: a6c051bdcd4841e59bb6d9e3514e0713
+    entity_id: binary_sensor.motion_sensor
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      payload: Motion detected
+      topic: Lab1/motion sensor 1
+  mode: single
+- id: '1646822339061'
+  alias: Door Close Lab1
+  description: ''
+  trigger:
+  - type: not_opened
+    platform: device
+    device_id: 01278e29f9077f6562ab71fa1a41f1fc
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_c51cf106_on_off
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: Lab1/Door1
+      payload: Closed
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 10
+      milliseconds: 0
+  - type: turn_off
+    device_id: 4e27875ca7efab4fadfab3da2fdab0e0
+    entity_id: switch.shellyplug_s_e18983
+    domain: switch
+  mode: single
+- id: '1646824855050'
+  alias: 'No motion '
+  description: ''
+  trigger:
+  - device_id: a6c051bdcd4841e59bb6d9e3514e0713
+    domain: zha
+    platform: device
+    type: device_offline
+    subtype: device_offline
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: Lab1/motion sensor 1
+      payload: No motion detected
+  mode: single
+- id: '1646835942283'
+  alias: Turnn offf automation
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 01278e29f9077f6562ab71fa1a41f1fc
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_c51cf106_on_off
+    domain: binary_sensor
+  condition: []
+  action:
+  - type: toggle
+    device_id: d5f0b70bae55c9b3b81aefbeb70df73c
+    entity_id: switch.lumi_lumi_plug_maeu01_e57a2c00_on_off
+    domain: switch
+  mode: single
+- id: '1646839483101'
+  alias: Plug Off Motion
+  description: ''
+  trigger:
+  - type: no_motion
+    platform: device
+    device_id: 12855e390be81bd68c3be28f28e0cd69
+    entity_id: binary_sensor.lumi_lumi_sensor_motionsensor2_aq2_ias_zone
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 3
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 222e1ccc4ba5d8eebb7c2cf3d0db901e
+    entity_id: switch.shellyplug_s_2020d6
+    domain: switch
+  mode: single
+- id: '1646839617272'
+  alias: no motion
+  description: ''
+  trigger:
+  - device_id: 12855e390be81bd68c3be28f28e0cd69
+    domain: zha
+    platform: device
+    type: device_offline
+    subtype: device_offline
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: Lab1/motion sensor
+      payload: No motion 2
+  mode: single
+- id: '1646840512344'
+  alias: motion
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 12855e390be81bd68c3be28f28e0cd69
+    entity_id: binary_sensor.lumi_lumi_sensor_motionsensor2_aq2_ias_zone
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: Lab1/motionsensor2
+      payload: Motion
+  mode: single
+- id: '1647423794530'
+  alias: Out of Sleep
+  description: ''
+  trigger:
+  - device_id: 12855e390be81bd68c3be28f28e0cd69
+    domain: zha
+    platform: device
+    type: device_offline
+    subtype: device_offline
+  condition: []
+  action:
+  - device_id: 12855e390be81bd68c3be28f28e0cd69
+    domain: button
+    entity_id: button.lumi_lumi_sensor_motionsensor2_aq2_identify
+    type: press
+  mode: single
+- id: '1648027940854'
+  alias: temp_sensor_auto
+  description: ''
+  trigger:
+  - device_id: e1475042351b42c52761d6bc87558304
+    domain: zha
+    platform: device
+    type: device_offline
+    subtype: device_offline
+  condition: []
+  action:
+  - device_id: e1475042351b42c52761d6bc87558304
+    domain: button
+    entity_id: button.lumi_lumi_weather_identify
+    type: press
+  mode: queued
+  max: 100000000000000
+- id: '1648029941787'
+  alias: power_solderen
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: 5a746e58111937832d47a9c24814e67b
+    entity_id: switch.lumi_lumi_plug_maeu01_on_off
+    domain: switch
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
+  condition:
+  - condition: device
+    type: is_off
+    device_id: 5a746e58111937832d47a9c24814e67b
+    entity_id: switch.lumi_lumi_plug_maeu01_on_off
+    domain: switch
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
+  action:
+  - type: turn_off
+    device_id: 5a746e58111937832d47a9c24814e67b
+    entity_id: switch.lumi_lumi_plug_maeu01_on_off
+    domain: switch
+  mode: restart
+- id: '1648623007183'
+  alias: shelly_auto_power off
+  description: ''
+  trigger:
+  - type: no_motion
+    platform: device
+    device_id: a71ef24f7c5e0bcb09851b8da0211ef1
+    entity_id: binary_sensor.lumi_lumi_sensor_motion_aq2_5c254d04_ias_zone
+    domain: binary_sensor
+    for:
+      hours: 3
+      minutes: 0
+      seconds: 0
+  - type: no_motion
+    platform: device
+    device_id: a6c051bdcd4841e59bb6d9e3514e0713
+    entity_id: binary_sensor.motion_sensor
+    domain: binary_sensor
+    for:
+      hours: 3
+      minutes: 0
+      seconds: 0
+  - type: no_motion
+    platform: device
+    device_id: 12855e390be81bd68c3be28f28e0cd69
+    entity_id: binary_sensor.lumi_lumi_sensor_motionsensor2_aq2_ias_zone
+    domain: binary_sensor
+    for:
+      hours: 3
+      minutes: 0
+      seconds: 0
+  condition:
+  - condition: device
+    type: is_on
+    device_id: 3164a957145e2ce643f311f9ad1c9d1b
+    entity_id: switch.shellyplug_auto
+    domain: switch
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 0
+  action:
+  - type: turn_off
+    device_id: 3164a957145e2ce643f311f9ad1c9d1b
+    entity_id: switch.shellyplug_auto
+    domain: switch
+  mode: single
+- id: '1650439161234'
+  alias: uurooster_automation
+  description: ''
+  trigger:
+  - platform: time_pattern
+    seconds: /1
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ state_attr(''sensor.uuroosterscraper_2021_56226836_51917133'',
+          ''TURN_ON_LIGHT_KLAS_2_85'') == "true" }}'
+      sequence:
+      - type: turn_on
+        device_id: 4f41417984573a76382267eb17c2343d
+        entity_id: switch.lumi_lumi_plug_maeu01_on_off
+        domain: switch
+    - conditions:
+      - condition: template
+        value_template: '{{ state_attr(''sensor.uuroosterscraper_2021_56226836_51917133'',
+          ''TURN_OFF_LIGHT_KLAS_2_85'') == "true" }}'
+      sequence:
+      - type: turn_off
+        device_id: 4f41417984573a76382267eb17c2343d
+        entity_id: switch.lumi_lumi_plug_maeu01_on_off
+        domain: switch
+    default: []
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: '{{ state_attr(''sensor.uuroosterscraper_2021_56226836_51917133'',
+          ''TURN_ON_LIGHT_KLAS_2_65'') == "true" }}'
+      sequence:
+      - type: turn_on
+        device_id: 5a746e58111937832d47a9c24814e67b
+        entity_id: switch.lumi_lumi_plug_maeu01_cd8c2c00_on_off
+        domain: switch
+    - conditions:
+      - condition: template
+        value_template: '{{ state_attr(''sensor.uuroosterscraper_2021_56226836_51917133'',
+          ''TURN_OFF_LIGHT_KLAS_2_65'') == "true" }}'
+      sequence:
+      - type: turn_off
+        device_id: 5a746e58111937832d47a9c24814e67b
+        entity_id: switch.lumi_lumi_plug_maeu01_cd8c2c00_on_off
+        domain: switch
+    default: []
+  mode: single
+- id: '1650439728660'
+  alias: light_off_after_temp_bord_rechts
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: 3da1a9189442673da91d12a6a67e0709
+    entity_id: light.bord_rechts
+    domain: light
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 20
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 3da1a9189442673da91d12a6a67e0709
+    entity_id: light.bord_rechts
+    domain: light
+  mode: single
+- id: '1650443107290'
+  alias: auto_power_on_lights_door_sensor
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: 01278e29f9077f6562ab71fa1a41f1fc
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_c51cf106_on_off
+    domain: binary_sensor
+  - type: motion
+    platform: device
+    device_id: a71ef24f7c5e0bcb09851b8da0211ef1
+    entity_id: binary_sensor.lumi_lumi_sensor_motion_aq2_5c254d04_ias_zone
+    domain: binary_sensor
+  - type: motion
+    platform: device
+    device_id: a6c051bdcd4841e59bb6d9e3514e0713
+    entity_id: binary_sensor.motion_sensor
+    domain: binary_sensor
+  - type: motion
+    platform: device
+    device_id: 12855e390be81bd68c3be28f28e0cd69
+    entity_id: binary_sensor.lumi_lumi_sensor_motionsensor2_aq2_ias_zone
+    domain: binary_sensor
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 3164a957145e2ce643f311f9ad1c9d1b
+    entity_id: switch.shellyplug_auto
+    domain: switch
+  - type: turn_on
+    device_id: 3da1a9189442673da91d12a6a67e0709
+    entity_id: light.bord_rechts
+    domain: light
+    flash: short
+  - type: turn_on
+    device_id: be79037d9e18b1c42b01824630612772
+    entity_id: light.bord_links
+    domain: light
+    flash: short
+  mode: single
+- id: '1650443689743'
+  alias: tempsens_ turn_off_bord_links
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: be79037d9e18b1c42b01824630612772
+    entity_id: light.bord_links
+    domain: light
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 20
+  condition: []
+  action:
+  - type: turn_off
+    device_id: be79037d9e18b1c42b01824630612772
+    entity_id: light.bord_links
+    domain: light
+  mode: single
+- id: '1650444897515'
+  alias: test light
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: e5bd2e48cfab90e870bb9993b460de40
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_92ddf006_on_off
+    domain: binary_sensor
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 3da1a9189442673da91d12a6a67e0709
+    entity_id: light.bord_rechts
+    domain: light
+  mode: single
+- id: '1650445158755'
+  alias: test open deur licht
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: e5bd2e48cfab90e870bb9993b460de40
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_92ddf006_on_off
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: Lab1/door2
+      payload: Open
+  - device_id: e1475042351b42c52761d6bc87558304
+    domain: button
+    entity_id: button.lumi_lumi_weather_identify
+    type: press
+  mode: single
+- id: '1650447368749'
+  alias: motion detected
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: a71ef24f7c5e0bcb09851b8da0211ef1
+    entity_id: binary_sensor.lumi_lumi_sensor_motion_aq2_5c254d04_ias_zone
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: Lab1/motion_sensor_shelly_auto
+      payload: Motion detected
+  mode: single
+- id: '1650455885264'
+  alias: auto_lights_off
+  description: ''
+  trigger:
+  - type: no_motion
+    platform: device
+    device_id: a71ef24f7c5e0bcb09851b8da0211ef1
+    entity_id: binary_sensor.lumi_lumi_sensor_motion_aq2_5c254d04_ias_zone
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 20
+      seconds: 0
+  - type: no_motion
+    platform: device
+    device_id: a6c051bdcd4841e59bb6d9e3514e0713
+    entity_id: binary_sensor.motion_sensor
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 20
+      seconds: 0
+  - type: no_motion
+    platform: device
+    device_id: 12855e390be81bd68c3be28f28e0cd69
+    entity_id: binary_sensor.lumi_lumi_sensor_motionsensor2_aq2_ias_zone
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 20
+      seconds: 0
+  condition:
+  - condition: device
+    type: is_on
+    device_id: be79037d9e18b1c42b01824630612772
+    entity_id: light.bord_links
+    domain: light
+  - condition: device
+    type: is_on
+    device_id: 3da1a9189442673da91d12a6a67e0709
+    entity_id: light.bord_rechts
+    domain: light
+  action:
+  - type: turn_off
+    device_id: be79037d9e18b1c42b01824630612772
+    entity_id: light.bord_links
+    domain: light
+  - type: turn_off
+    device_id: 3da1a9189442673da91d12a6a67e0709
+    entity_id: light.bord_rechts
+    domain: light
+  mode: single
+- id: '1650457546639'
+  alias: no motion detected
+  description: ''
+  trigger:
+  - device_id: a71ef24f7c5e0bcb09851b8da0211ef1
+    domain: zha
+    platform: device
+    type: device_offline
+    subtype: device_offline
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: Lab1/motion_sensor_shelly_auto
+      payload: No motion detected
+  mode: single
+- id: '1650460547588'
+  alias: Cast to Google Hub
+  description: ''
+  use_blueprint:
+    path: kind3r/cast-and-re-cast-a-lovelace-view-to-a-google-hub.yaml
+    input:
+      player: media_player.lab1_display
+      view: home
+      dashboard: Dashboard
+- id: '1651060160881'
+  alias: OctoPrintRdy
+  description: ''
+  trigger:
+  - type: turned_off
+    platform: device
+    device_id: 1dd12ba305b6ec6eb8f335027d0635d6
+    entity_id: binary_sensor.octoprint_printing
+    domain: binary_sensor
+  condition: []
+  action:
+  - device_id: 685e17f6000ce9e6b9f2112dd4178a7d
+    domain: mobile_app
+    type: notify
+    message: Printing is finished
+  - service: light.turn_on
+    target:
+      entity_id:
+      - light.bord_rechts
+      - light.bord_links
+    data:
+      flash: long
+      brightness_pct: 100
+      rgb_color:
+      - 0
+      - 255
+      - 0
+  mode: single

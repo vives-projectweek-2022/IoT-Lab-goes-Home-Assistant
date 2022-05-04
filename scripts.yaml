@@ -1,0 +1,76 @@
+'1':
+  alias: test Script
+  sequence:
+  - choose:
+    - conditions: []
+      sequence: []
+    default: []
+  - type: turn_on
+    device_id: d5f0b70bae55c9b3b81aefbeb70df73c
+    entity_id: switch.lumi_lumi_plug_maeu01_e57a2c00_on_off
+    domain: switch
+  mode: single
+  icon: mdi:alarm-light
+l:
+  sequence:
+  - wait_for_trigger:
+    - type: motion
+      platform: device
+      device_id: a6c051bdcd4841e59bb6d9e3514e0713
+      entity_id: binary_sensor.motion_sensor
+      domain: binary_sensor
+      for:
+        hours: 0
+        minutes: 0
+        seconds: 1
+  - type: turn_on
+    device_id: 222e1ccc4ba5d8eebb7c2cf3d0db901e
+    entity_id: switch.shellyplug_s_2020d6
+    domain: switch
+  mode: single
+  alias: Lamp On Motion
+'1646838926589':
+  sequence:
+  - wait_for_trigger:
+    - type: no_motion
+      platform: device
+      device_id: a6c051bdcd4841e59bb6d9e3514e0713
+      entity_id: binary_sensor.motion_sensor
+      domain: binary_sensor
+      for:
+        hours: 0
+        minutes: 0
+        seconds: 5
+  - type: turn_off
+    device_id: 222e1ccc4ba5d8eebb7c2cf3d0db901e
+    entity_id: switch.shellyplug_s_2020d6
+    domain: switch
+  mode: single
+  alias: Lamp Off Motion
+test_smart_plug:
+  alias: test_smart_plug
+  sequence:
+  - type: turn_off
+    device_id: 4f41417984573a76382267eb17c2343d
+    entity_id: switch.lumi_lumi_plug_maeu01_on_off
+    domain: switch
+  mode: single
+googlenesttheme:
+  alias: googleNestTheme
+  sequence:
+  - service: frontend.set_theme
+    data:
+      mode: dark
+      name: ios-dark-mode-blue-red
+  mode: single
+  icon: mdi:script
+rickroll:
+  alias: rickroll
+  sequence:
+  - service: media_player.play_media
+    target:
+      device_id: 30d2c2ab5ef809c082d54cc194d0118e
+    data:
+      media_content_id: https://youtu.be/dQw4w9WgXcQ?t=43
+      media_content_type: video/youtube
+  mode: single
