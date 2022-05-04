@@ -3,13 +3,15 @@
 Create the ultimate smart-home integration.
 Make an implementation of the campus of the future using a range of IoT devices, sensors and smart home solutions.
 
-- Use Home Assistant to automate and monitor the labs
+- Home Assistant to automate and monitor the labs
 - Zigbee, Z-Wave, Aqara and Wifi sensors
-- Raspberry pi
+- Raspberry pi + pi camera
+- Ultimaker 3D printer
+- Google hub
 
 ## Goals
 
-- lichten aan en uit laten gaan door middel van het vives uurooster.
+- Lichten aan en uit laten gaan door middel van het vives uurooster.
 
 - Lichten aan laten gaan wanneer de deur open gaat en dat er beweging wordt gedetecteerd.
 
@@ -45,7 +47,7 @@ The username is Shadow & password is Team12345
 - [Aaron Delplancq](https://github.com/aaronD14)
 - [Duncan Roland](https://github.com/r0897472)
 - [Brent Schaepdrijver](https://github.com/Brent-Schaepdrijver)
-- [Szymon Diżewski](https://github.com/)
+- [Szymon Diżewski](https://github.com/ShadowExistence)
 
 ## The mentors
 
