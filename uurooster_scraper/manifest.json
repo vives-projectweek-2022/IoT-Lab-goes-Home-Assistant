@@ -1,0 +1,11 @@
+{
+  "domain": "uuroosterscraper",
+  "name": "uuroosterscraper",
+  "version": "1.0.0",
+  "documentation": "",
+  "dependencies": [],
+  "codeowners": [
+    "@aaronD14"
+  ],
+  "requirements": []
+}
