@@ -3,51 +3,31 @@
 Create the ultimate smart-home integration.
 Make an implementation of the campus of the future using a range of IoT devices, sensors and smart home solutions.
 
-- Home Assistant to automate and monitor the labs
+- Use Home Assistant to automate and monitor the labs
 - Zigbee, Z-Wave, Aqara and Wifi sensors
-- Raspberry pi + pi camera
-- Ultimaker 3D printer
-- Google hub
+- Raspberry pi
 
 ## Goals
+Het lokaal zo efficiënt en praktisch mogelijk maken aan de hand van sensoren en  automaties in Home Assistant als Operating System op een Raspberry PI 4.
 
-- Lichten aan en uit laten gaan door middel van het vives uurooster.
+## Problem solution
 
-- Lichten aan laten gaan wanneer de deur open gaat en dat er beweging wordt gedetecteerd.
-
-- Lichten uit laten gaan wanneer er geen beweging wordt gedetecteerd.
-
-- Bekijken of de 3D printer start, zo ja dan laten we een lampje branden en we zien de conditie van 3D printer in home assistant als hij bezig is of niet.
-
-- Schermen aan en uit laten gaan aan de hand van 1 knop.
-
-- Google assistant integreren.
-
-- Motion sensors gebruiken om smartplug aan te laten gaan en automatisch uit te schakelen na verloop van tijd.
-
-## Voortgang
-
-- Phillips hue lampen geconfigureerd met deursensor zodat de lampen en een shelly plug_auto aangaan.
-
-- Phillips hue lampen geconfigureerd zodat de lichten uitgaan wanneer er na voorloop van van tijd geen beweging wordt gedetecteerd.
-
-- Shelly plug geconfigureerd met motion sensor zodat de shelly plug uitgaat na een bepaald aantal tijd wanneer er geen beweging wordt waargenomen.
-
-- Shellyplug_auto gaat aan bij gedetecteerde waarnemingen door motion sensors.
-
-- Drie motion sensors geconfigureerd met de lichten van whiteboard en shelly_auto.
-
-## Home Assistant
-
-- [The link to Home Assistant](https://iot-lab-ha.devbitapp.be/lovelace/home)  
-The username is Shadow & password is Team12345
+- Monitoren gaan aan en uit met 1 knop in home assistant en de google hub.
+- Lichten gaan aan en uit volgens het uurrooster (zie folder uurooster_scraper)
+- Lichten gaan aan ook aan wanneer de deur open gaat en wanneer er beweging wordt gedetecteerd met bewegingssensors.
+- Lichten gaan uit als de bewegingssensoren een tijdje geen beweging opmerken wanneer er volgens het uurrooster geen les is.
+- shelly plug gaat uit wanneer er na verloop van tijd geen beweging wordt gedetecteerd.
+- 3D printer melding naar gsm laten geven wanneer de printer klaar is en lichten laten flikkeren.
+- Mogelijk gemaakt om de lichten en de monitors te kunnen besturen via google hub.
+- Google voice assistant geïmplementeert zodat je verschillende commando's kan geven met spraak via de google hub om bepaalde actie's te doen zoals bijvoorbeeld de lichten aan en uit te doen, de kleur veranderen, de monitor's aan en uit laten gaan,... 
+- NIeuwe overlay en overzicht gemaakt voor Home Assistant om alles gemakkelijk en efficiënt te kunnen besturen via Home Assistant en meer informatie te kunnen zien van de 3d printer (zie folder Overview_images).
 
 ## Project members
 
 - [Aaron Delplancq](https://github.com/aaronD14)
 - [Duncan Roland](https://github.com/r0897472)
 - [Brent Schaepdrijver](https://github.com/Brent-Schaepdrijver)
-- [Szymon Diżewski](https://github.com/ShadowExistence)
+- [Szymon Diżewski](https://github.com/)
 
 ## The mentors
 
