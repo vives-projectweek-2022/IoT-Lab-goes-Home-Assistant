@@ -13,6 +13,11 @@ Make an implementation of the campus of the future using a range of IoT devices,
 
 Het lokaal zo efficiënt en praktisch mogelijk maken aan de hand van sensoren en  automaties in Home Assistant als Operating System op een Raspberry PI 4.
 
+## Home assistant
+
+- [The link to Home Assistant](https://iot-lab-ha.devbitapp.be/lovelace/home)
+The username is Shadow & password is Team12345
+
 ## Solution
 
 - Monitoren gaan aan en uit met 1 knop in home assistant en de google hub.
