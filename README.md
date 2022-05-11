@@ -16,7 +16,16 @@ Het lokaal zo efficiënt en praktisch mogelijk maken aan de hand van sensoren en
 ## Home assistant
 
 - [The link to Home Assistant](https://iot-lab-ha.devbitapp.be/lovelace/home)  
-The username is Shadow & password is Team12345
+De login gegevens voor de Home Assistant
+Username -> Shadow  
+Password -> Team12345
+
+## OctoPrint
+
+- [Go to OctoPrint](http://octopi.local/)  
+De login gegevens voor de OctoPrint  
+Username -> Brent  
+Password -> OctoPrint
 
 ## Solution
 
