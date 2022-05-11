@@ -15,7 +15,7 @@ Het lokaal zo efficiënt en praktisch mogelijk maken aan de hand van sensoren en
 
 ## Home assistant
 
-- [The link to Home Assistant](https://iot-lab-ha.devbitapp.be/lovelace/home)
+- [The link to Home Assistant](https://iot-lab-ha.devbitapp.be/lovelace/home)  
 The username is Shadow & password is Team12345
 
 ## Solution
